@@ -9,19 +9,20 @@
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int n = 98;
-	unsigned long fib1 = 1, fib2 = 2, nextFib;
+	unsigned long a = 1, b = 2, c;
+	int count;
 
-	printf("%lu,\t%lu", fib1, fib2);
+	printf("%lu, %lu", a, b);
 
-	for (int i = 3; i <= n; i++)
+	for (count = 3; count <= 98; count++)
 	{
-		nextFib = fib1 + fib2;
-		printf(",\t%lu", nextFib);
-		fib1 = fib2;
-		fib2 = nextFib;
+		c = a + b;
+		printf(", %lu", c);
+		a = b;
+		b = c;
 	}
 
 	printf("\n");
