@@ -4,21 +4,29 @@
 
 #define PASSWORD_LENGTH 60
 
+/**
+ * main - Entry point of the program.
+ *
+ * Return: Always 0.
+ */
+
 int main(void)
 {
-	char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	char charset[] = "abcdefghijklmnopqrstuvwxyz
+		ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	char password[PASSWORD_LENGTH + 1];
 	int i;
 
-	srand(time(NULL)); // Initialize random number generator
+	srand(time(NULL));
 
-	// Generate random password
 	for (i = 0; i < PASSWORD_LENGTH; i++)
 	{
 		int index = rand() % (sizeof(charset) - 1);
+
 		password[i] = charset[index];
 	}
-	password[PASSWORD_LENGTH] = '\0'; // Add the null terminator
+
+	password[PASSWORD_LENGTH] = '\0';
 
 	printf("%s\n", password);
 
