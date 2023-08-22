@@ -9,6 +9,7 @@
 	void rev_string(char *s);
 	void puts2(char *str);
 	void puts_half(char *str);
+	void print_array(int *a, int n);
 
 	int _putchar(char);
 	void print_alphabet(void);
