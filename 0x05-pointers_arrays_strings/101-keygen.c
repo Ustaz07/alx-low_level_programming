@@ -12,8 +12,9 @@
 
 int main(void)
 {
-	char charset[] = "abcdefghijklmnopqrstuvwxyz
-		ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	char charset[] = "abcdefghijklmnopqrstuvwxyz"
+                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                     "0123456789";
 	char password[PASSWORD_LENGTH + 1];
 	int i;
 
