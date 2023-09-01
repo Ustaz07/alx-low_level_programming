@@ -24,10 +24,10 @@ char *_strstr(char *haystack, char *needle)
 		}
 
 		if (*ndl_ptr == '\0')
-			return haystack;
+			return (haystack);
 
 		haystack++;
 	}
 
-	return NULL;
+	return (NULL);
 }
