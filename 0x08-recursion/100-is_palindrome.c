@@ -29,13 +29,7 @@ bool is_palindrome_check(char *s, int start, int end)
  *
  * Return: 1 if s is a palindrome, 0 if not.
  */
-int is_palindrome(char *s)
+int is_palindrome(char *s, int len)
 {
-	int len = 0;
-
-	while (s[len] != '\0')
-	{
-		len++;
-	}
 	return (is_palindrome_check(s, 0, len - 1) ? 1 : 0);
 }
