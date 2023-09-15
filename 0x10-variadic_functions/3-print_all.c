@@ -10,6 +10,7 @@ void print_all(const char * const format, ...)
 {
 	va_list xy;
 	char *temp = "";
+	char *str;
 	unsigned int i = 0;
 
 	va_start(xy, format);
@@ -25,18 +26,20 @@ void print_all(const char * const format, ...)
 				printf("%s%d", temp, va_arg(xy, int));
 				break;
 			case 'f':
-				printf("%s%f", temp, (float)va_arg(xy, double));
+				printf("%s%f", temp, va_arg(xy, double));
 				break;
 			case 's':
-				{
-					char *str = va_arg(xy, char *);
+				
+					str = va_arg(xy, char *);
 
 					if (str == NULL)
-						printf("%s(nil)", temp);
-					else
-						printf("%s%s", temp, str);
-				}
+						printf("(nil)");
+					printf("%s%s", temp, str);
+				
 				break;
+				default:
+				i++;
+				continue;
 		}
 		temp = ", ";
 		i++;
