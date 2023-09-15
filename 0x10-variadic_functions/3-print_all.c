@@ -29,13 +29,13 @@ void print_all(const char * const format, ...)
 				printf("%s%f", temp, va_arg(xy, double));
 				break;
 			case 's':
-				
+
 					str = va_arg(xy, char *);
 
 					if (str == NULL)
 						printf("(nil)");
 					printf("%s%s", temp, str);
-				
+
 				break;
 				default:
 				i++;
