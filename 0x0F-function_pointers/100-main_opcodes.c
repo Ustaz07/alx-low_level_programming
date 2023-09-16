@@ -6,14 +6,14 @@
  * @argc: The number of command-line arguments.
  * @argv: An array of command-line argument strings.
  *
- * Return: 0 on success, 1 for incorrect number of arguments, 2 for negative number_of_bytes.
+ * Return: 0 on success, 1 for incorrect arg, 2 for negative no.
  */
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return 1;
+		return (1);
 	}
 
 	int number_of_bytes = atoi(argv[1]);
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	if (number_of_bytes < 0)
 	{
 		printf("Error\n");
-		return 2;
+		return (2);
 	}
 
 	unsigned char *main_address = (unsigned char *)main;
@@ -36,6 +36,6 @@ int main(int argc, char *argv[])
 			printf("\n");
 	}
 
-	return 0;
+	return (0);
 }
 
