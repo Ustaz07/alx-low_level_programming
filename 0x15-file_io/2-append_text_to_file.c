@@ -4,6 +4,14 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+/**
+ * append_text_to_file - Function that appends text at the end to the  file
+ * @filename: The filename to open and append in
+ * @text_content: The NULL terminated string to add
+ *
+ * Return: 1 on success, -1 if the file can't be created.
+ */
+
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd, fdw, len = 0;
