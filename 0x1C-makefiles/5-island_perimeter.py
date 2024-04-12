@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+@author: Shamsuddeen Abdullahi
+"""
+
 
 def island_perimeter(grid):
     """
