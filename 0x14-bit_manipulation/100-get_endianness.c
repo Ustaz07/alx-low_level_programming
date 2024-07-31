@@ -7,18 +7,18 @@
  */
 int get_endianness(void)
 {
-    /**
-     * union to test endianness
-     * @i: integer to test
-     * @c: first byte of integer
-     */
-    union 
-    {
-        unsigned int i;
-        char c[4];
-    } test;
+	/**
+	 * union to test endianness
+	 * @i: integer to test
+	 * @c: first byte of integer
+	 */
+	union
+	{
+		unsigned int i;
+		char c[4];
+	} test;
 
-    test.i = 1;
+	test.i = 1;
 
-    return (test.c[0]);
+	return (test.c[0]);
 }
